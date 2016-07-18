@@ -13,4 +13,10 @@ test "serial number cannot be repeated" do
 	@inventory2.serial = 1
 assert_not @inventory1.valid?
 end
+
+test "wheel size must be greater than 0" do
+	@inventory1.size = 0
+assert_not @inventory1.valid?
+end
+
 end
